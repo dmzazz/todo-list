@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <!-- Dark Mode Toggle -->
+    <div class="bg-[url(images/bg.jpg)] bg-cover bg-center w-screen h-screen">
+      <div class="relative min-h-full w-full p-5 sm:p-20 flex mx-auto z-10">
+        <!-- left -->
+        <div class="w-[25%] bg-[#FFB22C] p-2 sm:p-5 rounded-s-xl">
+          <div>
+            <h2 class="font-bold uppercase">Filter Task</h2>
+          </div>
+          <div class="mt-5">
+            <ul>
+              <li data-filter="all" class="text-lg cursor-pointer">All Tasks</li>
+              <li data-filter="pending" class="text-lg cursor-pointer">Pending Task</li>
+              <li data-filter="completed" class="text-lg cursor-pointer">Completed Task</li>
+            </ul>
+          </div>
+        </div>
+        <!-- right -->
+        <div class="bg-[#854836] relative w-[75%] px-2 rounded-e-xl">
+          <!-- show new task -->
+          <h2 id="active-filter" class="text-white font-bold ml-2 mt-2">All Tasks</h2>
+
+          <div class="px-4 h-[330px] no-scrollbar overflow-y-auto">
+            <ul class="list-item" id="displayTask">
+              <!-- display task here -->
+            </ul>
+          </div>
+          <!-- start add task -->
+          <div class="w-full absolute bottom-4 px-4">
+            <!-- start form -->
+            <form id="form">
+              <div class="bg-[#443627] p-4 rounded-lg">
+                <div class="flex flex-col sm:flex-row gap-2">
+                  <input type="text" name="title" id="title" placeholder="Add task title" class="bg-[#EFDCAB] flex-grow px-4 py-2 outline-none rounded-md" required />
+                  <input type="date" name="date" id="duedate" class="bg-[#EFDCAB] px-4 py-2 outline-none rounded-md" required />
+                </div>
+                <div class="mt-2">
+                  <input type="text" name="description" id="description" placeholder="Add description" class="bg-[#EFDCAB] w-full px-4 py-2 outline-none rounded-md" required />
+                </div>
+
+                <button type="submit" class="bg-[#EFDCAB] hover:bg-white mt-4 px-4 py-2 rounded-lg cursor-pointer transition duration-200">Submit</button>
+              </div>
+            </form>
+            <!-- end form -->
+          </div>
+          <!-- end add task -->
+        </div>
+      </div>
+    </div>
+
+    <!-- overlay -->
+    <div class="absolute top-0 bottom-0 left-0 right-0 bg-gray-200 opacity-50"></div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
