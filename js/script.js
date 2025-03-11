@@ -9,21 +9,6 @@ const darkModeToggle = document.getElementById("darkModeToggle");
 let editTaskId = null; // variable for save id
 let filter = "all"; // default filter
 
-// function to generate random ID
-const generatorId = () => {
-  return Date.now() + Math.floor(Math.random() * 1000);
-};
-
-// set default date to today
-const setDefaultDate = () => {
-  const today = new Date();
-  const formattedDate = today.toISOString().split("T")[0]; // format YYYY-MM-DD
-  dateInput.value = formattedDate;
-};
-
-// set default date when the page loads
-setDefaultDate();
-
 // add filter
 const filterList = document.querySelectorAll("ul li");
 filterList.forEach((item) => {
@@ -191,3 +176,21 @@ const deleteTask = (id) => {
 
 // show task
 displayTasks();
+
+
+// ============ //
+
+// function to generate random ID
+const generatorId = () => {
+  return crypto.randomUUID()
+};
+
+// set default date to today
+const setDefaultDate = () => {
+  const today = new Date();
+  const formattedDate = today.toISOString().split("T")[0]; // format YYYY-MM-DD
+  dateInput.value = formattedDate;
+};
+
+// set default date when the page loads
+setDefaultDate();
