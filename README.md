@@ -35,13 +35,12 @@ Aplikasi ini memungkinkan pengguna untuk menambahkan, mengedit, menyelesaikan, d
 ✅ Edit tugas yang telah dibuat.
 ✅ Hapus tugas yang tidak diperlukan.
 ✅ Filter tugas berdasarkan status: **All, Pending, Completed**.
-✅ Mode **Dark Mode** otomatis dengan Tailwind CSS.
 ✅ Data tersimpan di **localStorage** agar tidak hilang saat merefresh halaman.
 
 ## 🔧 **Cara Menggunakan**
 1. **Clone repository** ini atau download file ZIP.
    ```sh
-   git clone https://github.com/username/to-do-list-app.git
+   https://github.com/dmzazz/todo-list.git
    ```
 2. **Buka file `index.html`** di browser favorit Anda.
 3. **Gunakan aplikasi** dengan menambahkan tugas baru dan mengelola daftar tugas.
